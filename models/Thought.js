@@ -35,12 +35,9 @@ const handleError = (err) => console.error(err);
 // Create a new instance of the model, a document
 Thought.create(
     {
-        title: 'Diary of Anne Frank',
-        author: 'Anne Frank',
-        publisher: 'Scholastic',
-        stockCount: 10,
-        price: 10,
-        inStock: true,
+        thoughtText: "Here's a cool thought...",
+        username: 'lernantino',
+        userId: "5edff358a0fcb779aa7b118b",
     },
     (err) => (err ? handleError(err) : console.log('Created new document'))
 );

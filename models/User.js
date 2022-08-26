@@ -5,9 +5,19 @@ const userSchema = new mongoose.Schema({
     username: { type: String, required: true, trim: true, unique: true },
     email: { type: String, required: false, unique: true, },
     // Must match a valid email address (look into Mongoose's matching validation)
-    thoughts: {},
+    thoughts: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Thought',
+        },
+    ],
     // Array of _id values referencing the Thought model
-    friends: {},
+    friends: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+        },
+    ],
     // Array of _id values referencing the User model (self-reference)
 },
     {
@@ -31,12 +41,8 @@ const handleError = (err) => console.error(err);
 // Create a new instance of the model, a document
 User.create(
     {
-        title: 'Diary of Anne Frank',
-        author: 'Anne Frank',
-        publisher: 'Scholastic',
-        stockCount: 10,
-        price: 10,
-        inStock: true,
+        username: 'lernantino',
+        email: 'lernantino@gmail.com',
     },
     (err) => (err ? handleError(err) : console.log('Created new document'))
 );
