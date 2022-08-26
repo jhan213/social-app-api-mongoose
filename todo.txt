@@ -1,0 +1,31 @@
+API Routes
+
+
+/api/users
+returns the users in insomnia
+
+/api/thoughts
+returns the thoughts in insomnia
+
+/api/users/:id
+returns a specifc, whole user in insomnia
+
+/api/thoughts/:id
+returns a specific thought
+
+above are the required get Routes
+
+POST, PUT, and DELETE routes for users and thoughts
+
+/api/users/:id/friends/:id
+POST and DELETE for user's friend list
+
+POST and DELETE routes for reactions to thoughts being tested in Insomnia
+
+Array of _id values referencing model
+
+schema settings: virtual called friendCount that retrieves the length of the user's friends array field on query
+
+
+Use a getter method to format the timestamp on query
+
