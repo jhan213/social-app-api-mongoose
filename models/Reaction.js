@@ -4,7 +4,7 @@ const reactionSchema = new mongoose.Schema(
     {
         reactionId: mongoose.ObjectId,
         reactionBody: { type: String, required: true, maxLength: 280 },
-        userName: { type: String, required: true },
+        username: { type: String, required: true },
         createdAt: { type: Date, default: Date.now() },
     },
     {
