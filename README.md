@@ -6,10 +6,6 @@ Packages Required: express
 
 To run: `node server.js`
 
-A walkthrough video is provided below as well as the JSON formats for creating users, thoughts, friends, reactions with POST requests.
-
-Walkthrough Video Link: https://drive.google.com/file/d/1N9xdyVpwhaBADUiFRxrN3QRO6PYsdfnT/view
-
 ## JSON Format for Adding Data w/ MongoDB
 ### Example Data to Add User w/ POST request
 `{
